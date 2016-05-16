@@ -13,10 +13,10 @@ MachineCode <- function(Register,input){
   require(magrittr)
   
   #Addition
-  if(substr(example,start=1,stop=6) == "000000"){
-    t <- substr(example,start=7,stop=11) %>% BinToDec
-    s <- substr(example,start=12,stop=16) %>% BinToDec
-    d <- substr(example,start=17,stop=21) %>% BinToDec
+  if(substr(input,start=1,stop=6) == "000000"){
+    t <- substr(input,start=7,stop=11) %>% BinToDec
+    s <- substr(input,start=12,stop=16) %>% BinToDec
+    d <- substr(input,start=17,stop=21) %>% BinToDec
     output <- Register[t] + Register[s]
     return(list(position=d,number=output))
   }
